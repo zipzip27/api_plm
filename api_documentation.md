@@ -219,3 +219,20 @@ https://tiktokshop-api.polimellc.media/api/v2
 - Tất cả request và response sử dụng định dạng JSON.
 - API key phải được gửi trong header `x-token` cho mọi yêu cầu.
 - Giới hạn số lượng request: 60 request/phút.
+
+## Webhook
+
+### Cập nhật trạng thái đơn hàng
+- **Phương thức**: POST
+- **Mô tả**: Cập nhật trạng thái đơn hàng.
+- **Response**:
+  - **200 OK**: Thành công
+  - Retries tối đa 3 lần
+- **Ví dụ Body**:
+  ```json
+  {
+    "status": "IN_TRANSIT",
+    "order_number":  "123456789",
+    "event": "order_status_change"
+  }
+  ```
