@@ -31,7 +31,7 @@ curl -X GET "https://print-api.polimellc.media/api/v2/orders" \
 
 ### Lấy API Key
 
-API Key được cấp bởi hệ thống. Truy cập [link](https://plm-print.polimellc.media/settings) để lấy api key
+API Key được cấp bởi hệ thống. Truy cập [link](https://print.polimellc.media/settings) để lấy api key
 
 ---
 
