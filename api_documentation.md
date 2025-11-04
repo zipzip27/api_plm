@@ -31,7 +31,7 @@ curl -X GET "https://print-api.polimellc.media/api/v2/orders" \
 
 ### Lấy API Key
 
-API Key được cấp bởi quản trị viên hệ thống. Truy cập [link](https://plm-print-fe.onrender.com/settings) để lấy api key
+API Key được cấp bởi hệ thống. Truy cập [link](https://plm-print.polimellc.media/settings) để lấy api key
 
 ---
 
@@ -456,11 +456,15 @@ curl -X GET "https://print-api.polimellc.media/api/v2/orders/123" \
 |------------|---------|-------------------------|
 | `order_id` | integer | ID của đơn hàng cần hủy |
 
+#### POST Parameters
+
+| Tham Số  | Kiểu   | Bắt buộc | Mô Tả         |
+|----------|--------|----------|---------------|
+| `reason` | string | Không    | Lí do cần hủy |
+
 #### Điều Kiện Hủy Đơn
 
 - Đơn hàng phải ở trạng thái `PROCESSING`
-- Đơn hàng chưa được gửi đến máy in
-- Đơn hàng chưa được đóng gói
 - Cần huỷ đơn sau trạng thái `PROCESSING` vui lòng liên hệ hỗ trợ
 
 #### Response - Thành Công (204 No Content)
@@ -637,7 +641,6 @@ curl -X POST "https://print-api.polimellc.media/api/v2/orders/123/cancel" \
 API có giới hạn số lượng request:
 
 - **Xác thực bằng API Key**: 60 requests/phút
-- **Không xác thực**: 30 requests/phút
 
 Khi vượt quá giới hạn, bạn sẽ nhận được response:
 
