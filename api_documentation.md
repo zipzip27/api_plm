@@ -128,34 +128,36 @@ API Key được cấp bởi hệ thống. Truy cập [link](https://print.polim
 
 ```json
 {
-  "id": 123,
-  "group": 1,
-  "order_number": "ORD-123456",
-  "tracking_number": "123123456789",
-  "reference": "REF-001",
-  "status": "PENDING",
-  "shipping_name": "Nguyễn Văn A",
-  "shipping_phone": "0901234567",
-  "shipping_address": "123 Đường ABC",
-  "shipping_address2": "Phòng 456",
-  "shipping_city": "Hồ Chí Minh",
-  "shipping_state": "HCM",
-  "shipping_country": "VN",
-  "shipping_zip": null,
-  "shipping_email": null,
-  "shipping_label": null,
-  "carrier": "USPS",
-  "currency_code": null,
-  "total_amount": "0.00",
-  "total_items": 2,
-  "customer_note": "Ghi chú đặc biệt",
-  "created_at": "2025-11-02T10:30:00Z"
+  "data": {
+    "id": 123,
+    "group": 1,
+    "order_number": "ORD-123456",
+    "tracking_number": "123123456789",
+    "reference": "REF-001",
+    "status": "PENDING",
+    "shipping_name": "Nguyễn Văn A",
+    "shipping_phone": "0901234567",
+    "shipping_address": "123 Đường ABC",
+    "shipping_address2": "Phòng 456",
+    "shipping_city": "Hồ Chí Minh",
+    "shipping_state": "HCM",
+    "shipping_country": "VN",
+    "shipping_zip": null,
+    "shipping_email": null,
+    "shipping_label": null,
+    "carrier": "USPS",
+    "currency_code": null,
+    "total_amount": "0.00",
+    "total_items": 2,
+    "customer_note": "Ghi chú đặc biệt",
+    "created_at": "2025-11-02T10:30:00Z"
+  }
 }
 ```
 
 #### Response - Lỗi (400 Bad Request)
 
-**Lưu ý**: Tất cả response lỗi đều được chuẩn hóa theo format sau:
+**Lưu ý**: Tất cả response lỗi đều theo format sau:
 
 **Format**:
 
